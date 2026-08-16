@@ -1,4 +1,4 @@
-// Portfolio Data Configuration - Easily edit your personal details here!
+
 const portfolioData = {
   personalInfo: {
     name: "Nethmi Wijesinghe",

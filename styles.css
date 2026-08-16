@@ -1,8 +1,3 @@
-/* ==========================================================================
-   SUPERIOR PORTFOLIO STYLESHEET
-   Design System: Glassmorphism Dark/Light Hybrids with Vibrant Gradients
-   ========================================================================== */
-
 :root {
   /* Color Palette - Dark Mode (Default) */
   --bg-primary: #0f172a;
@@ -10,20 +5,23 @@
   --bg-card: rgba(30, 41, 59, 0.7);
   --bg-card-hover: rgba(51, 65, 85, 0.8);
   --bg-glass: rgba(15, 23, 42, 0.85);
-  
+
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  
-  --accent-primary: #6366f1; /* Indigo */
-  --accent-secondary: #06b6d4; /* Cyan */
-  --accent-tertiary: #10b981; /* Emerald */
+
+  --accent-primary: #6366f1;
+  /* Indigo */
+  --accent-secondary: #06b6d4;
+  /* Cyan */
+  --accent-tertiary: #10b981;
+  /* Emerald */
   --accent-gradient: linear-gradient(135deg, #6366f1 0%, #06b6d4 100%);
   --accent-gradient-hover: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%);
-  
+
   --border-color: rgba(255, 255, 255, 0.1);
   --border-glow: rgba(99, 102, 241, 0.4);
-  
+
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
@@ -44,14 +42,14 @@
   --bg-card: rgba(255, 255, 255, 0.85);
   --bg-card-hover: rgba(241, 245, 249, 1);
   --bg-glass: rgba(255, 255, 255, 0.9);
-  
+
   --text-primary: #0f172a;
   --text-secondary: #475569;
   --text-muted: #94a3b8;
-  
+
   --border-color: rgba(0, 0, 0, 0.08);
   --border-glow: rgba(99, 102, 241, 0.3);
-  
+
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 16px 24px rgba(0, 0, 0, 0.12);
@@ -59,7 +57,9 @@
 }
 
 /* Base Resets */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -196,7 +196,8 @@ section {
   padding: 0.25rem 0;
 }
 
-.nav-link:hover, .nav-link.active {
+.nav-link:hover,
+.nav-link.active {
   color: var(--text-primary);
 }
 
@@ -211,7 +212,8 @@ section {
   transition: var(--transition);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   width: 100%;
 }
 
@@ -292,14 +294,14 @@ section {
   transform: translateY(-2px);
 }
 
-/* Hero Section */
+
 .hero {
   min-height: 100vh;
   display: flex;
   align-items: center;
   padding-top: 100px;
   background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 40%);
+    radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 40%);
 }
 
 .hero-grid {
@@ -333,9 +335,20 @@ section {
 }
 
 @keyframes pulse {
-  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-  70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
-  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
 }
 
 .hero-title {
@@ -412,9 +425,20 @@ section {
 }
 
 @keyframes floatMorph {
-  0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: translateY(0px); }
-  50% { border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%; transform: translateY(-12px); }
-  100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; transform: translateY(0px); }
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: translateY(0px);
+  }
+
+  50% {
+    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    transform: translateY(-12px);
+  }
+
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    transform: translateY(0px);
+  }
 }
 
 .avatar-wrapper img {
@@ -539,7 +563,8 @@ section {
   transition: var(--transition);
 }
 
-.skill-tab-btn:hover, .skill-tab-btn.active {
+.skill-tab-btn:hover,
+.skill-tab-btn.active {
   background: var(--accent-gradient);
   color: #ffffff;
   border-color: transparent;
@@ -984,7 +1009,8 @@ section {
   text-transform: uppercase;
 }
 
-.contact-info-text p, .contact-info-text a {
+.contact-info-text p,
+.contact-info-text a {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
@@ -1127,7 +1153,11 @@ footer {
 
 /* Responsive Media Queries */
 @media (max-width: 992px) {
-  .hero-grid, .about-grid, .timeline-section, .contact-grid {
+
+  .hero-grid,
+  .about-grid,
+  .timeline-section,
+  .contact-grid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
