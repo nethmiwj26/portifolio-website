@@ -76,6 +76,19 @@ const portfolioData = {
       githubUrl: "",
       liveDemoUrl: "",
       contribution: "Designed the system from real operational pain points: defined core features, data flow, and problem-to-feature mapping for deadline management, document retrieval, and client notifications."
+    },
+
+    {
+      id: "proj-3",
+      title: "DevPortfolio - Personal Developer Portfolio",
+      category: "Frontend & Web",
+      featured: true,
+      image: "assets/myphoto_portifolio.jpeg",
+      description: "A modern, responsive single-page developer portfolio featuring a glassmorphic dark/light design system, dynamic skill category filters, project details modal, and complete PPD II assessment compliance.",
+      technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "Git / GitHub", "Netlify"],
+      githubUrl: "https://github.com/nethmiwj26/portifolio-website",
+      liveDemoUrl: "https://sage-sunburst-19f482.netlify.app",
+      contribution: "Sole Developer: Architected and built the full-stack static web application, engineered the dynamic JavaScript DOM renderer, designed custom glassmorphism CSS, and configured automated CI/CD deployment on Netlify."
     }
   ],
 
