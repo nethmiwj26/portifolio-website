@@ -1,12 +1,11 @@
-// Portfolio Application Logic & Dynamic UI Engine
+//
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Theme Toggle Initialization
+
   initThemeToggle();
 
-  // 2. Mobile Navigation Toggle
   initMobileNav();
 
-  // 3. Render All Dynamic Content from portfolioData
+
   renderHero();
   renderAbout();
   renderSkills();
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderResume();
   renderContactInfo();
 
-  // 4. Setup Event Listeners (Contact Form, Project Modals, Smooth Scroll)
+
   initContactForm();
   initProjectModals();
   initScrollSpy();
@@ -38,10 +37,10 @@ function initThemeToggle() {
   themeBtn.addEventListener('click', () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    
+
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('portfolio-theme', newTheme);
-    
+
     themeBtn.innerHTML = newTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
   });
 }
@@ -62,7 +61,7 @@ function initMobileNav() {
       }
     });
 
-    // Close menu when clicking links
+
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -72,7 +71,7 @@ function initMobileNav() {
   }
 }
 
-/* Render Hero Section */
+
 function renderHero() {
   const data = portfolioData.personalInfo;
   document.getElementById('hero-name').innerText = data.name;
@@ -92,7 +91,7 @@ function renderHero() {
     }
   }
 
-  // Social Links
+
   const socialsContainer = document.getElementById('hero-socials');
   socialsContainer.innerHTML = `
     <a href="${data.github}" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -101,34 +100,34 @@ function renderHero() {
   `;
 }
 
-/* Render About Section */
+
 function renderAbout() {
   const about = portfolioData.aboutMe;
-  
-  // Background & Career Goals
+
+
   document.getElementById('about-background').innerText = about.background;
   document.getElementById('about-goals').innerText = about.careerGoals;
 
-  // Technical Focus Tags
+
   const focusContainer = document.getElementById('about-focus-tags');
   focusContainer.innerHTML = about.technicalFocus.map(item => `
     <span class="tag"><i class="fas fa-check-circle"></i> ${item}</span>
   `).join('');
 
-  // Interests Tags
+
   const interestsContainer = document.getElementById('about-interests-tags');
   interestsContainer.innerHTML = about.interests.map(item => `
     <span class="tag"><i class="fas fa-star"></i> ${item}</span>
   `).join('');
 }
 
-/* Render Skills Section with Interactive Category Filter Tabs */
+
 function renderSkills() {
   const skillsData = portfolioData.skills;
   const tabsContainer = document.getElementById('skills-tabs');
   const gridContainer = document.getElementById('skills-grid');
 
-  // Generate Filter Buttons
+
   const categories = ["All", ...skillsData.map(s => s.category)];
   tabsContainer.innerHTML = categories.map((cat, idx) => `
     <button class="skill-tab-btn ${idx === 0 ? 'active' : ''}" data-category="${cat}">
@@ -136,10 +135,10 @@ function renderSkills() {
     </button>
   `).join('');
 
-  // Function to render skill cards based on filter
+
   const renderSkillCards = (filterCategory = "All") => {
-    const filteredSkills = filterCategory === "All" 
-      ? skillsData 
+    const filteredSkills = filterCategory === "All"
+      ? skillsData
       : skillsData.filter(s => s.category === filterCategory);
 
     gridContainer.innerHTML = filteredSkills.map(group => `
@@ -166,7 +165,7 @@ function renderSkills() {
 
   renderSkillCards("All");
 
-  // Tab Filter Click Handlers
+
   tabsContainer.addEventListener('click', (e) => {
     if (e.target.classList.contains('skill-tab-btn')) {
       tabsContainer.querySelectorAll('.skill-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -177,7 +176,7 @@ function renderSkills() {
   });
 }
 
-/* Render Projects Section */
+
 function renderProjects() {
   const projects = portfolioData.projects;
   const gridContainer = document.getElementById('projects-grid');
@@ -195,7 +194,7 @@ function renderProjects() {
           ${proj.technologies.map(t => `<span class="tech-pill">${t}</span>`).join('')}
         </div>
         <div class="project-links">
-          <a href="${proj.githubUrl}" target="_blank" class="btn btn-secondary btn-sm">
+          <a href="${proj.githubUrl && proj.githubUrl.trim() !== '' ? proj.githubUrl : portfolioData.personalInfo.github}" target="_blank" class="btn btn-secondary btn-sm">
             <i class="fab fa-github"></i> Code
           </a>
           ${proj.liveDemoUrl ? `
@@ -212,12 +211,12 @@ function renderProjects() {
   `).join('');
 }
 
-/* Render Timeline (Education & Experience Side by Side) */
+
 function renderTimeline() {
   const education = portfolioData.education;
   const experience = portfolioData.experience;
 
-  // Education Timeline
+
   const eduContainer = document.getElementById('education-timeline');
   eduContainer.innerHTML = education.map(edu => `
     <div class="timeline-item">
@@ -244,7 +243,7 @@ function renderTimeline() {
     </div>
   `).join('');
 
-  // Experience Timeline
+
   const expContainer = document.getElementById('experience-timeline');
   expContainer.innerHTML = experience.map(exp => `
     <div class="timeline-item">
@@ -262,7 +261,7 @@ function renderTimeline() {
   `).join('');
 }
 
-/* Render Certifications & Achievements */
+
 function renderCertifications() {
   const certs = portfolioData.certifications;
   const achievements = portfolioData.achievements;
@@ -295,13 +294,13 @@ function renderCertifications() {
   container.innerHTML = certCards + achCards;
 }
 
-/* Render Resume Section */
+
 function renderResume() {
   const info = portfolioData.personalInfo;
   document.getElementById('download-resume-btn').href = info.resumeUrl;
 }
 
-/* Render Contact Info Cards */
+
 function renderContactInfo() {
   const info = portfolioData.personalInfo;
   const list = document.getElementById('contact-info-list');
@@ -338,7 +337,7 @@ function renderContactInfo() {
   `;
 }
 
-/* Contact Form Handler */
+
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
@@ -357,7 +356,7 @@ function initContactForm() {
   }
 }
 
-/* Project Detail Modal Handler */
+
 function initProjectModals() {
   const modal = document.getElementById('project-modal');
   const modalBody = document.getElementById('modal-project-details');
@@ -390,7 +389,7 @@ function initProjectModals() {
           </div>
 
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="${proj.githubUrl}" target="_blank" class="btn btn-secondary">
+            <a href="${proj.githubUrl && proj.githubUrl.trim() !== '' ? proj.githubUrl : portfolioData.personalInfo.github}" target="_blank" class="btn btn-secondary">
               <i class="fab fa-github"></i> View GitHub Repository
             </a>
             ${proj.liveDemoUrl ? `
@@ -419,7 +418,7 @@ function initProjectModals() {
   });
 }
 
-/* ScrollSpy for Nav Highlighting */
+
 function initScrollSpy() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.nav-link');
