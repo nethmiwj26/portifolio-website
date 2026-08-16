@@ -1,4 +1,4 @@
-
+//
 const portfolioData = {
   personalInfo: {
     name: "Nethmi Wijesinghe",
@@ -60,7 +60,7 @@ const portfolioData = {
       image: "assets/image.png",
       description: "A collaborative task management platform with authentication, workspaces, and task/kanban tracking, built as a team project for the Web Application Development module.",
       technologies: ["Node.js", "Express", "Prisma", "MySQL", "Socket.IO"],
-      githubUrl: "",
+      githubUrl: "https://github.com/Arankan05/task-management-system",
       liveDemoUrl: "",
       contribution: "Served as QA/Testing lead: wrote and ran test cases, tracked dependency vulnerabilities via npm audit, and collaborated on Git workflows within the team codebase."
     },
