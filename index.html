@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional Software Engineer Portfolio - Showcasing skills, academic achievements, full-stack projects, and work experience.">
+  <title>Nethmi Wijesinghe | Software Engineering Portfolio</title>
+  
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo" id="nav-logo">
+        <i class="fas fa-terminal"></i> Nethmi<span>Wijesinghe</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#timeline" class="nav-link">Experience & Edu</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#resume" class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+        <button class="menu-btn" id="menu-btn" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span> Available for Graduate & Internship Roles
+        </div>
+        <h1 class="hero-title">Hi, I'm <span class="gradient-text" id="hero-name">Nethmi Wijesinghe</span></h1>
+        <div class="hero-subtitle" id="hero-headline">Aspiring Full-Stack Software Engineer</div>
+        <p class="hero-bio" id="hero-bio">
+          Passionate Information Technology student at University of Kelaniya.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-code-branch"></i> Explore Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-socials" id="hero-socials">
+          <!-- Social Icons Rendered via JS -->
+        </div>
+      </div>
+
+      <div class="hero-avatar-container">
+        <div class="avatar-wrapper">
+          <img id="hero-avatar" src="assets/myphoto_portifolio.jpeg" alt="Nethmi Wijesinghe Portrait">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Me</span>
+        <h2 class="section-title">Background & Personal Brand</h2>
+        <p class="section-subtitle">Driven by curiosity, engineering excellence, and continuous learning.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-icon-header">
+            <div class="about-icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>My Journey</h3>
+          </div>
+          <p id="about-background">Loading background narrative...</p>
+          
+          <h4 style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">Technical Areas of Focus:</h4>
+          <div class="tag-cloud" id="about-focus-tags"></div>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon-header">
+            <div class="about-icon" style="background: linear-gradient(135deg, #06b6d4, #10b981);"><i class="fas fa-bullseye"></i></div>
+            <h3>Career Goals & Aspirations</h3>
+          </div>
+          <p id="about-goals">Loading career goals...</p>
+
+          <h4 style="margin-top: 1.5rem; font-size: 1.1rem; color: var(--text-primary);">Personal & Tech Interests:</h4>
+          <div class="tag-cloud" id="about-interests-tags"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">A comprehensive breakdown of my engineering capabilities and tools.</p>
+      </div>
+
+      <div class="skills-tabs" id="skills-tabs">
+        <!-- Skill Tabs Rendered via JS -->
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Skill Cards Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Portfolio Showcase</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Academic, personal, and open-source software projects built with modern stacks.</p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Projects Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Timeline Section -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Qualifications</span>
+        <h2 class="section-title">Education & Experience</h2>
+        <p class="section-subtitle">My academic history, internships, freelance work, and club leadership roles.</p>
+      </div>
+
+      <div class="timeline-section">
+        <div>
+          <div class="timeline-column-header">
+            <i class="fas fa-university"></i> Education
+          </div>
+          <div class="timeline-items" id="education-timeline">
+            <!-- Education Items Rendered via JS -->
+          </div>
+        </div>
+
+        <div>
+          <div class="timeline-column-header">
+            <i class="fas fa-briefcase"></i> Experience & Leadership
+          </div>
+          <div class="timeline-items" id="experience-timeline">
+            <!-- Experience Items Rendered via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications & Achievements Section -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Honors & Credentials</span>
+        <h2 class="section-title">Certifications & Hackathons</h2>
+        <p class="section-subtitle">Industry certifications, competition wins, and professional workshops.</p>
+      </div>
+
+      <div class="certs-grid" id="certs-achievements-grid">
+        <!-- Certifications Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume">
+    <div class="container">
+      <div class="resume-box">
+        <div class="resume-icon-large"><i class="fas fa-file-pdf"></i></div>
+        <h3>Curriculum Vitae / Resume</h3>
+        <p>View or download my updated resume detailing technical skills, academic records, and software engineering experience.</p>
+        <div class="resume-actions">
+          <a href="assets/resume.pdf" id="download-resume-btn" download class="btn btn-primary">
+            <i class="fas fa-download"></i> Download Resume PDF
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Request Official Transcript
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Contact Information</h2>
+        <p class="section-subtitle">Feel free to reach out for opportunities, collaborations, or general inquiries.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-list" id="contact-info-list">
+          <!-- Contact Cards Rendered via JS -->
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" class="form-control" placeholder="Project Inquiry / Job Opportunity" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" class="form-control" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <p id="footer-copyright">&copy; 2026 Nethmi Wijesinghe. Built for GNCT23212a - PPD II Assessment 1.</p>
+      <p style="font-size: 0.8rem; color: var(--text-muted);">Crafted with HTML5, Vanilla CSS, and JavaScript. Zero external frameworks required.</p>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div class="modal-overlay" id="project-modal">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close Modal">&times;</button>
+      <div id="modal-project-details"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="portfolioData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
