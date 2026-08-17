@@ -83,7 +83,7 @@ const portfolioData = {
       title: "DevPortfolio - Personal Developer Portfolio",
       category: "Frontend & Web",
       featured: true,
-      image: "assets/myphoto_portifolio.jpeg",
+      image: "assets/image copy.png",
       description: "A modern, responsive single-page developer portfolio featuring a glassmorphic dark/light design system, dynamic skill category filters, project details modal, and complete PPD II assessment compliance.",
       technologies: ["HTML5", "CSS3", "JavaScript (ES6+)", "Git / GitHub", "Netlify"],
       githubUrl: "https://github.com/nethmiwj26/portifolio-website",
